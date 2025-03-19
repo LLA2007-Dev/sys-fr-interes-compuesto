@@ -47,6 +47,7 @@ void determinarVv()
     //Declaracion de las variables
     double c,i,n;   //declaracion de variables que se usaran en un futuro
     double Vv;      //variable de resultado
+    int contador;      //Contador que especifica la cantidad de veces que se imprimira la tabla
 
     printf("[ c ] Ingresa la cuota constante: ");
     scanf("%lf",&c);
@@ -55,10 +56,19 @@ void determinarVv()
     printf("[ n ] Ingrese el plazo del prestamo: ");
     scanf("%lf",&n);
 
-    //formula para calcular
+    //formula para calcular el interes compuesto con cuota vencida
     Vv = (c * (pow((1 + i),n) - 1)) / (i * pow((1 + i),n));
 
     printf("%lf\t%lf\t%lf \n",c,i,n);
-    printf("%.0lf",Vv);
+    printf("%.0lf\n",Vv);
+
+    //Imprime la Cabecera de las tablas
+    printf("%s%16s%11s %.0lf%%%16s%9s","Anio","Cuota Vencida","Interes",i * 100,"Amortizacion","Cuota");
+    //bucle for que se encargara de imprimir la tabla
+    //for(contador = 1; contador <= n; contador++)
+    //{
+      //  printf("%2d%15.0lf%15.0lf",contador,Vv,Vv*i);
+        //printf("\n");
+    //}
 
 }
