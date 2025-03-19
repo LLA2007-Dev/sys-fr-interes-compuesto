@@ -24,6 +24,8 @@ int main()
     switch(operacion){
     case 1:
         printf("DETERMINAR Vv ( VALORES DE CUOTA VENCIDA )\n");
+        printf("[ ATENCION, TODOS LOS VALORES SERAN TOMADOS COMO DECIMALES ]\n\n");
+        determinarVv();
         break;
     case 2:
         printf("DETERMINAR Va ( VALORES DE CUOTA ADELANTADA ) \n");
@@ -42,5 +44,21 @@ int main()
 //Funcion para determinar el interes compuesto con cuotas vencidas
 void determinarVv()
 {
+    //Declaracion de las variables
+    double c,i,n;   //declaracion de variables que se usaran en un futuro
+    double Vv;      //variable de resultado
+
+    printf("[ c ] Ingresa la cuota constante: ");
+    scanf("%lf",&c);
+    printf("[ i ] Ingresa la tasa de interes anual: ");
+    scanf("%lf",&i);
+    printf("[ n ] Ingrese el plazo del prestamo: ");
+    scanf("%lf",&n);
+
+    //formula para calcular
+    Vv = (c * (pow((1 + i),n) - 1)) / (i * pow((1 + i),n));
+
+    printf("%lf\t%lf\t%lf \n",c,i,n);
+    printf("%.0lf",Vv);
 
 }

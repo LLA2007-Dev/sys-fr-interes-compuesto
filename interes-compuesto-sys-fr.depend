@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1742370897 source:c:\proyectos\c\interes-compuesto-fr-sys\interes-compuesto-sys-fr\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
