@@ -39,3 +39,8 @@ int main()
 
     return 0;
 }
+//Funcion para determinar el interes compuesto con cuotas vencidas
+void determinarVv()
+{
+
+}
