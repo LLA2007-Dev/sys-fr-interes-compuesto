@@ -5,6 +5,7 @@
 void determinarVv();    //Determina el valor de la cuota vencida y nos da una tabla
 void determinarVa();    //Determina el valor de la cuota adelantada y nos da una tabla
 void determinarCuota(); //Determina el valor de la cuota y nos da una tabla
+void lineaSeparadora(int);
 
 //Declaracion de la fundion main
 int main()
@@ -63,12 +64,22 @@ void determinarVv()
     printf("%.0lf\n",Vv);
 
     //Imprime la Cabecera de las tablas
-    printf("%s%16s%11s %.0lf%%%16s%9s","Anio","Cuota Vencida","Interes",i * 100,"Amortizacion","Cuota");
+    printf("%s%16s%11s %.0lf%%%16s%11s\n","Anio","Cuota Vencida","Interes",i * 100,"Amortizacion","Cuota");
+    lineaSeparadora(65);
     //bucle for que se encargara de imprimir la tabla
-    //for(contador = 1; contador <= n; contador++)
-    //{
-      //  printf("%2d%15.0lf%15.0lf",contador,Vv,Vv*i);
-        //printf("\n");
-    //}
+    for(contador = 1; contador <= n; contador++)
+    {
+        printf("%3d%17.0lf%15.0lf%16.0lf%11.0lf",contador,Vv,Vv * i,Vv,c);
+        printf("\n");
+    }
 
+}
+
+void lineaSeparadora(int numeroDeLineas)
+{
+    for(int i = 1;i <= numeroDeLineas; i++)
+    {
+        printf("-");
+    }
+    printf("\n");
 }
